@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenIMS PDF Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="./icon.png" class="logo" alt="OpenIMS icon" />
+        <div>
+          <h1>OpenIMS</h1>
+          <p>PDF Chatbot</p>
+        </div>
+      </div>
+
+      <label class="upload-box" for="pdfInput">Upload PDF</label>
+      <input type="file" id="pdfInput" accept="application/pdf" multiple hidden />
+      <button id="storeBtn" class="main-btn">Store Document</button>
+      <p class="hint">Upload PDF files to start chatting.</p>
+
+      <h3>Uploaded Documents</h3>
+      <div id="docList" class="doc-list"></div>
+    </aside>
+
+    <main class="chat-area">
+      <header class="topbar">OpenIMS</header>
+
+      <section id="chatBox" class="chat-box">
+        <div class="message-row bot-row">
+          <img src="./icon.png" class="avatar" alt="bot" />
+          <div class="bubble bot-bubble">Hi, I am OpenIMS. Upload PDF files and ask me anything from them.</div>
+        </div>
+      </section>
+
+      <form id="chatForm" class="chat-form">
+        <input id="messageInput" type="text" placeholder="Ask anything from your PDF documents..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
