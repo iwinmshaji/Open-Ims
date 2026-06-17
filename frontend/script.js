@@ -1,5 +1,4 @@
 const API_BASE = "https://openims-backend.onrender.com";
-
 const pdfInput = document.getElementById("pdfInput");
 const storeBtn = document.getElementById("storeBtn");
 const docList = document.getElementById("docList");
