@@ -1,4 +1,4 @@
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://openims-backend.onrender.com";
 
 const pdfInput = document.getElementById("pdfInput");
 const storeBtn = document.getElementById("storeBtn");
