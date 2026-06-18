@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <div class="app">
+
     <aside class="sidebar">
       <div class="brand">
         <img src="./icon.png" class="logo" alt="OpenIMS icon" />
@@ -17,30 +19,50 @@
         </div>
       </div>
 
-      <label class="upload-box" for="pdfInput">Upload PDF</label>
-      <input type="file" id="pdfInput" accept="application/pdf" multiple hidden />
-      <button id="storeBtn" class="main-btn">Store Document</button>
-      <p class="hint">Upload PDF files to start chatting.</p>
+      <div class="side-menu">
+        <p class="menu-title">Features</p>
 
-      <h3>Uploaded Documents</h3>
-      <div id="docList" class="doc-list"></div>
+        <label class="menu-item" for="pdfInput">📄 Upload PDF</label>
+        <input type="file" id="pdfInput" accept="application/pdf" multiple hidden />
+
+        <button id="storeBtn" class="menu-item btn-reset">💾 Store Document</button>
+        <button class="menu-item btn-reset" onclick="document.getElementById('messageInput').focus()">💬 Chat</button>
+      </div>
+
+      <div class="uploaded-section">
+        <h3>Uploaded Documents</h3>
+        <p class="hint">Upload PDFs and ask questions from them.</p>
+        <div id="docList" class="doc-list"></div>
+      </div>
     </aside>
 
     <main class="chat-area">
-      <header class="topbar">OpenIMS</header>
 
       <section id="chatBox" class="chat-box">
-        <div class="message-row bot-row">
-          <img src="./icon.png" class="avatar" alt="bot" />
-          <div class="bubble bot-bubble">Hi, I am OpenIMS. Upload PDF files and ask me anything from them.</div>
+
+        <div class="welcome-screen" id="welcomeScreen">
+          <div class="orb"></div>
+
+          <h1>Ready to Chat with Your PDFs?</h1>
+          <p>Upload your documents and ask OpenIMS anything from them.</p>
+
+          <div class="quick-actions">
+            <label for="pdfInput" class="quick-btn">📄 Upload PDF</label>
+            <button class="quick-btn" onclick="document.getElementById('messageInput').focus()">💬 Ask Question</button>
+            <button class="quick-btn" onclick="document.getElementById('storeBtn').click()">💾 Store PDF</button>
+          </div>
         </div>
+
       </section>
 
       <form id="chatForm" class="chat-form">
-        <input id="messageInput" type="text" placeholder="Ask anything from your PDF documents..." autocomplete="off" />
-        <button type="submit">Send</button>
+        <label for="pdfInput" class="attach-btn">📎</label>
+        <input id="messageInput" type="text" placeholder="Ask anything..." autocomplete="off" />
+        <button type="submit">➜</button>
       </form>
+
     </main>
+
   </div>
 
   <script src="script.js"></script>
