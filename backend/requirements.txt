@@ -1,8 +1,7 @@
 fastapi
-uvicorn[standard]
+uvicorn
 python-multipart
 pypdf
-python-dotenv
 groq
 chromadb
-sentence-transformers
+python-dotenv
